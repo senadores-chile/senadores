@@ -1,3 +1,3 @@
 const senadores = require('./')
 
-senadores(s => console.log(s))
+senadores({}, s => console.log(s))
