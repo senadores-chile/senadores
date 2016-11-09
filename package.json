@@ -2,7 +2,7 @@
   "name": "senadores",
   "description": "Datos publicos disponibles en la pagina www.senado.cl",
   "author": "YerkoPalma",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "files": [
     "index.js"
