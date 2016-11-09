@@ -12,19 +12,20 @@ const getSenadores = (query, cb) => {
   scraperjs.StaticScraper.create(URL)
     .scrape($ => {
       return $('table td:last-child').map(function () {
-        console.log()
         let nombre = $(this).find('div').first().text()
         let region = $(this).find('div:nth-child(2)').find('strong').first().text()
-        let circunscripcion = parseInt($(this).find('div:nth-child(2)').find('strong').first().next().text())
+        let circunscripcion = parseInt($(this).find('div:nth-child(2)').find('strong').first().next().text(), 10)
         let str = $(this).find('div').last().text()
         let telefono = str.substr(str.indexOf('('), 15)
         let mail = $(this).find('div:nth-child(3)').find('a').text()
+        let partido = $(this).parents('td').next().first().find('strong').text()
         let senador = {
           nombre,
           region,
           circunscripcion,
           telefono,
-          mail
+          mail,
+          partido
         }
         return senador
       }).get()

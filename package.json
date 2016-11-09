@@ -8,6 +8,7 @@
     "index.js"
   ],
   "scripts": {
+    "start": "node example.js",
     "test": "standard --verbose | snazzy && ava"
   },
   "repository": "YerkoPalma/senadores",
