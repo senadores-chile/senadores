@@ -1,0 +1,26 @@
+{
+  "name": "senadores",
+  "description": "Datos publicos disponibles en la pagina www.senado.cl",
+  "author": "YerkoPalma",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard --verbose | snazzy && ava"
+  },
+  "repository": "YerkoPalma/senadores",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "scraperjs": "^1.2.0",
+    "x-ray": "^2.3.1"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "snazzy": "^5.0.0",
+    "standard": "^8.5.0"
+  }
+}
