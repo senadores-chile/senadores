@@ -25,94 +25,20 @@ senadores({
 
 ## API
 
-### `senadores([query,] cb)`
+### `senadores([options][, type])`
 
-La libreria consiste en una única función que ejecuta queries. El query de entrada puede ser un `string` (busca por nombre), un `number` (busca por rut) o un `object` (busca por query) con variadas opciones.
-Si no se ingresa un query, por defecto busca el resumen de todos los senadores. El único parametro obligatorio es el callback que recibe como entrada el resultado de la busqueda
+#### `options`
 
-#### `query`
+#### `type`
 
-Es un objecto que tiene los mismos parametros que el objeto senadores, para la mayoria de los valores buscara coincidencias exactas (usando `assert.equal` y `assert.deepEqual`), a menos que se especifique otra condición usando expresiones regulares para los strings u operadores logicos para los numeros.
+## Otros enlaces
 
-#### `cb`
+- [senadores-base](https://github.com/YerkoPalma/senadores-base) - Información basica y estatica de los senadores actuales de Chile.
+- [senadores-asistencia](https://github.com/YerkoPalma/senadores-asistencia) - Observador de la asistencia de senadores tanto a sesiones de sala como a comisiones del senado de Chile.
+- [senadores-detalle](https://github.com/YerkoPalma/senadores-detalle) - Detalle complementario a la información base de cada senador.
+- [senadores-viajes](https://github.com/YerkoPalma/senadores-viajes) - Obtiene el detalle de los viajes realizados por senadores de Chile.
+- [senadores-elecciones](https://github.com/YerkoPalma/senadores-elecciones) - Contiene la información de las ultimas elecciones de senadores, obtenidas desde el Servel.
 
-Callback que recibe como entrada un arreglo con los posibles objetos que retorna la query de busqueda ingresada. En caso de no tener resultados, recibe un arreglo vacio.
+## Licencia
 
-### Objetos
-
-La función retorna un arreglo de objetos, que pueden tener alguna de las siguientes estructuras:
-
-#### senadores
-
-```javascript
-senadores(s => console.log(s))
-senadores({}, s => console.log(s))
-```
-
-```javascript
-[{
-  nombre: 'Zaldívar Larraín, Andrés',
-  region: 'Región del Maule',
-  circunscripcion: 10,
-  telefono: '(56-32) 2504691',
-  mail: 'azaldivar@senado.cl',
-  partido: 'P.D.C.'
-},{
-  ...
-}]
-```
-
-#### senador
-
-```javascript
-senadores('Zaldivar', s => console.log(s))
-senadores(10191543, s => console.log(s))
-```
-
-```javascript
-{
-  nombre: 'Zaldívar Larraín, Andrés',
-  region: 'Región del Maule',
-  circunscripcion: 10,
-  telefono: '(56-32) 2504691',
-  mail: 'azaldivar@senado.cl',
-  partido: 'P.D.C.',
-  representacion: {
-    superficie: {
-      cantidad: 2135443,
-      medida: 'km2'
-    },
-    habitantes: 123135,
-    distritos: [321,321,354,8,2,897,9,8],
-    circunscripcion: 10,
-    comunas: ['sad'. 'asd', 'wer']
-  },
-  comisiones: [{
-    nombre: 'de educacion',
-    tipo: 'permanente',
-    fecha: 321354,
-    calidad: 'permanente'
-  }, {
-    // ...
-  }]
-}
-```
-#### asistencia
-
-```javascript
-// TODO
-```
-
-#### votaciones
-
-```javascript
-// TODO
-```
-
-## License
-
-[MIT](/license)
-
-***
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
+[MIT](/license) © [Yerko Palma](https://github.com/YerkoPalma).

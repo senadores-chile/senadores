@@ -15,10 +15,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "assert": "^1.4.1",
-    "info-rut": "^3.0.0",
-    "p-map": "^1.0.0",
-    "scraperjs": "^1.2.0"
+    "assert": "^1.4.1"
   },
   "devDependencies": {
     "ava": "*",
