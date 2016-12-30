@@ -1,38 +1,19 @@
 import test from 'ava'
+import {
+  allamand,
+  allende,
+  girardi,
+  socialistas,
+  metropolitanos,
+  circunscripcion3,
+  asistenciaLagos,
+  eleccionesAllamand,
+  viajesZaldivar
+} from './fixtures'
 import senadores from './'
 
 test('senadores options', t => {
   t.plan(3)
-  const allamand = {
-    id: 905,
-    nombre: 'Allamand Zavala, Andrés',
-    rut: '5002921-2',
-    region: 'Región Metropolitana ',
-    circunscripcion: 7,
-    telefono: '(56-32) 2504701',
-    mail: 'allamand@senado.cl',
-    partido: 'R.N.'
-  }
-  const allende = {
-    id: 985,
-    nombre: 'Allende Bussi, Isabel',
-    rut: '4465782-1',
-    region: 'Región de Atacama',
-    circunscripcion: 3,
-    telefono: '(56-32) 2504671',
-    mail: 'iallende@senado.cl',
-    partido: 'P.S.'
-  }
-  const girardi = {
-    id: 909,
-    nombre: 'Girardi Lavín, Guido',
-    rut: '8462985-5',
-    region: 'Región Metropolitana ',
-    circunscripcion: 7,
-    telefono: '(56-32) 2504570',
-    mail: 'ggirardi@senado.cl',
-    partido: 'P.P.D.'
-  }
   // option as string
   const optString = senadores('Allamand')
   t.deepEqual(optString, allamand)
@@ -44,8 +25,14 @@ test('senadores options', t => {
   t.deepEqual(optArray, [allamand, girardi, allende])
   // option as object
     // partido
+    const optPartido = senadores({ partido: 'ps' })
+    t.deepEqual(optPartido, socialistas)
     // region
+    const optRegion = senadores({ region: 'Metropolitana' })
+    t.deepEqual(optRegion, metropolitanos)
     // nombre
+    const optNombre = senadores({ nombre: 'Guido' })
+    t.deepEqual(optNombre, girardi)
     // rut
     // circunscripcion
     // telefono
