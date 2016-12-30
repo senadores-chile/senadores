@@ -66,6 +66,7 @@ Indicador del tipo de consulta que se esta realizando. Puede tener los siguiente
 - `'elecciones'`: Obtiene información de ingresos y gastos durante periodo de elecciones de cada senador.
 - `'elecciones.ingresos'`: Obtiene información de ingresos durante periodo de elecciones de cada senador.
 - `'elecciones.gastos'`: Obtiene información de gastos durante periodo de elecciones de cada senador.
+- `'todos'`: Obtiene la información equivalente de todo el resto de los modos. _CUIDADO: Proceso lento_.
 
 ## Otros enlaces
 
