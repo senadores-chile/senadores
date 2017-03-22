@@ -1,6 +1,6 @@
 # senadores [![npm version](https://img.shields.io/npm/v/senadores.svg?style=flat-square)](https://www.npmjs.com/package/senadores) [![Build Status](https://img.shields.io/travis/YerkoPalma/senadores/master.svg?style=flat-square)](https://travis-ci.org/YerkoPalma/senadores) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
-> Datos públicos disponibles en la página www.senado.cl
+> WIP - Datos públicos disponibles en la página www.senado.cl
 
 ## Instalación
 
@@ -24,6 +24,7 @@ senadores({
 ```
 
 ## API
+
 
 ### `senadores([options][, type])`
 
