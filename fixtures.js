@@ -1,4 +1,4 @@
-export const allamand = {
+exports.allamand = {
   id: 905,
   nombre: 'Allamand Zavala, Andrés',
   rut: '5002921-2',
@@ -8,7 +8,7 @@ export const allamand = {
   mail: 'allamand@senado.cl',
   partido: 'R.N.'
 }
-export const allende = {
+exports.allende = {
   id: 985,
   nombre: 'Allende Bussi, Isabel',
   rut: '4465782-1',
@@ -18,7 +18,7 @@ export const allende = {
   mail: 'iallende@senado.cl',
   partido: 'P.S.'
 }
-export const girardi = {
+exports.girardi = {
   id: 909,
   nombre: 'Girardi Lavín, Guido',
   rut: '8462985-5',
@@ -28,7 +28,7 @@ export const girardi = {
   mail: 'ggirardi@senado.cl',
   partido: 'P.P.D.'
 }
-export const socialistas = [{
+exports.socialistas = [{
   id: 985,
   nombre: 'Allende Bussi, Isabel',
   rut: '4465782-1',
@@ -37,7 +37,7 @@ export const socialistas = [{
   telefono: '(56-32) 2504671',
   mail: 'iallende@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 1115,
   nombre: 'De Urresti Longton, Alfonso',
   rut: '9062945-K',
@@ -46,7 +46,7 @@ export const socialistas = [{
   telefono: 'l',
   mail: 'adeurresti@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 912,
   nombre: 'Letelier Morel, Juan Pablo',
   rut: '7049575-9',
@@ -55,7 +55,7 @@ export const socialistas = [{
   telefono: '(56-32) 2504576',
   mail: 'jpletelier@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 1119,
   nombre: 'Montes Cisternas, Carlos',
   rut: '4778821-8',
@@ -64,7 +64,7 @@ export const socialistas = [{
   telefono: '(56-32)  4714 |',
   mail: 'cmontes@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 1116,
   nombre: 'Quinteros Lara, Rabindranath',
   rut: '4423698-2',
@@ -73,7 +73,7 @@ export const socialistas = [{
   telefono: '(56-32) 2504721',
   mail: 'rquinteros@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 1010,
   nombre: 'Rossi Ciocca, Fulvio',
   rut: '9510876-8',
@@ -83,7 +83,7 @@ export const socialistas = [{
   mail: 'frossi@senado.cl',
   partido: 'P.S.'
 }]
-export const metropolitanos = [{
+exports.metropolitanos = [{
   id: 905,
   nombre: 'Allamand Zavala, Andrés',
   rut: '5002921-2',
@@ -92,7 +92,7 @@ export const metropolitanos = [{
   telefono: '(56-32) 2504701',
   mail: 'allamand@senado.cl',
   partido: 'R.N.'
-},{
+}, {
   id: 909,
   nombre: 'Girardi Lavín, Guido',
   rut: '8462985-5',
@@ -101,7 +101,7 @@ export const metropolitanos = [{
   telefono: '(56-32) 2504570',
   mail: 'ggirardi@senado.cl',
   partido: 'P.P.D.'
-},{
+}, {
   id: 1119,
   nombre: 'Montes Cisternas, Carlos',
   rut: '4778821-8',
@@ -110,7 +110,7 @@ export const metropolitanos = [{
   telefono: '(56-32)  4714 |',
   mail: 'cmontes@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 1120,
   nombre: 'Ossandón Irarrázabal, Manuel José',
   rut: '7022006-7',
@@ -120,7 +120,7 @@ export const metropolitanos = [{
   mail: 'mjossandon@senado.cl',
   partido: 'R.N.'
 }]
-export const circunscripcion3 = [{
+exports.circunscripcion3 = [{
   id: 985,
   nombre: 'Allende Bussi, Isabel',
   rut: '4465782-1',
@@ -129,7 +129,7 @@ export const circunscripcion3 = [{
   telefono: '(56-32) 2504671',
   mail: 'iallende@senado.cl',
   partido: 'P.S.'
-},{
+}, {
   id: 693,
   nombre: 'Prokurica Prokurica, Baldo',
   rut: '5261867-3',
@@ -139,7 +139,7 @@ export const circunscripcion3 = [{
   mail: 'bprokurica@senado.cl',
   partido: 'R.N.'
 }]
-export const asistenciaLagos = {
+exports.asistenciaLagos = {
   senador: {
     id: 987,
     nombre: 'Lagos Weber, Ricardo',
@@ -678,7 +678,7 @@ export const asistenciaLagos = {
     ]
   }
 }
-export const eleccionesAllamand = {
+exports.eleccionesAllamand = {
   'senador': {
     'id': 905,
     'nombre': 'Allamand Zavala, Andrés',
@@ -2057,7 +2057,7 @@ export const eleccionesAllamand = {
   },
   'representacion': {}
 }
-export const viajesZaldivar = {
+exports.viajesZaldivar = {
   id: 60,
   nombre: 'Zaldívar Larraín, Andrés',
   rut: '3244592-6',

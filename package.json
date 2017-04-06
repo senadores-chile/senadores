@@ -9,17 +9,20 @@
   ],
   "scripts": {
     "start": "node example.js",
-    "test": "standard --verbose | snazzy && ava"
+    "test": "standard --verbose | snazzy"
   },
   "repository": "YerkoPalma/senadores",
-  "keywords": [],
+  "keywords": [
+    "senado",
+    "congreso",
+    "chile",
+    "transparencia"
+  ],
   "license": "MIT",
-  "dependencies": {
-    "assert": "^1.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "ava": "*",
     "snazzy": "^5.0.0",
-    "standard": "^8.5.0"
+    "standard": "^8.5.0",
+    "tape": "^4.6.3"
   }
 }
