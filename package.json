@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "start": "node example.js",
-    "test": "standard --verbose | snazzy"
+    "test": "standard --verbose | snazzy && blue-tape test.js | tap-summary"
   },
   "repository": "YerkoPalma/senadores",
   "keywords": [
@@ -19,10 +19,13 @@
     "transparencia"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "senadores-base": "^1.4.0"
+  },
   "devDependencies": {
+    "blue-tape": "^1.0.0",
     "snazzy": "^5.0.0",
     "standard": "^8.5.0",
-    "tape": "^4.6.3"
+    "tap-summary": "^3.0.2"
   }
 }
