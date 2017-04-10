@@ -20,7 +20,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "senadores-base": "^1.4.0"
+    "senadores-base": "^1.4.0",
+    "senadores-detalle": "^1.0.0"
   },
   "devDependencies": {
     "blue-tape": "^1.0.0",
