@@ -1,13 +1,3 @@
-exports.allamand = {
-  id: 905,
-  nombre: 'Allamand Zavala, Andrés',
-  rut: '5002921-2',
-  region: 'Región Metropolitana ',
-  circunscripcion: 7,
-  telefono: '(56-32) 2504701',
-  mail: 'allamand@senado.cl',
-  partido: 'R.N.'
-}
 exports.detalleAllende = {
   id: 985,
   nombre: 'Allende Bussi, Isabel',
@@ -46,26 +36,6 @@ exports.detalleAllende = {
     'http://www.flickr.com/photos/isabelallendebussi',
     'http://www.isabelallendebussi.cl/'
   ]
-}
-exports.allende = {
-  id: 985,
-  nombre: 'Allende Bussi, Isabel',
-  rut: '4465782-1',
-  region: 'Región de Atacama',
-  circunscripcion: 3,
-  telefono: '(56-32) 2504671',
-  mail: 'iallende@senado.cl',
-  partido: 'P.S.'
-}
-exports.girardi = {
-  id: 909,
-  nombre: 'Girardi Lavín, Guido',
-  rut: '8462985-5',
-  region: 'Región Metropolitana ',
-  circunscripcion: 7,
-  telefono: '(56-32) 2504570',
-  mail: 'ggirardi@senado.cl',
-  partido: 'P.P.D.'
 }
 exports.socialistas = [{
   id: 985,
