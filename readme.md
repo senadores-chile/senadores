@@ -56,8 +56,7 @@ El resultado obtenido al final, dependerá de la variable `type` ingresada, por 
 
 Indicador del tipo de consulta que se esta realizando. Puede tener los siguientes valores:
 
-- `'default'`: Obtiene información básica de los senadores.
-- `'detalle'`: Obtiene detalle de los senadores.
+- `'default'`: Obtiene detalle de los senadores.
 - `'asistencia'`: Obtiene asistencia de sala y comisiones de los senadores.
 - `'asistencia.sala'`: Obtiene asistencia de sala de los senadores.
 - `'asistencia.comisiones'`: Obtiene asistencia de comisiones de los senadores.

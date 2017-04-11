@@ -1,3 +1,3 @@
 const senadores = require('./')
 
-senadores({}, s => console.log(s))
+senadores('Allamand', s => console.log(s))
