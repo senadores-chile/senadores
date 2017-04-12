@@ -1,3 +1,65 @@
+exports.detalleAllamand = {
+  id: 905,
+  nombre: 'Allamand Zavala, Andrés',
+  rut: '5002921-2',
+  region: 'Región Metropolitana ',
+  circunscripcion: 7,
+  telefono: '(56-32) 2504701',
+  mail: 'allamand@senado.cl',
+  partido: 'R.N.',
+  representacion: {
+    'superficie': {
+      'cantidad': 8423,
+      'medida': 'Km2'
+    },
+    habitantes: 2974692,
+    circunscripcion: '7 (Santiago Poniente)',
+    distritos: [
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      30,
+      31
+    ],
+    comunas: [
+      'Colina',
+      'Lampa',
+      'Quilicura',
+      'Pudahuel',
+      'Tiltil',
+      'Conchalí',
+      'Huechuraba',
+      'Renca',
+      'Quinta Normal',
+      'Lo Prado',
+      'Cerro Navia',
+      'Independencia',
+      'Recoleta',
+      'Cerrillos',
+      'Estación Central',
+      'Maipú',
+      'Santiago',
+      'Buin',
+      'Calera de Tango',
+      'Paine',
+      'San Bernardo',
+      'Alhué',
+      'Curacaví',
+      'El Monte',
+      'Isla de Maipo',
+      'María Pinto',
+      'Melipilla',
+      'Padre Hurtado',
+      'Peñaflor',
+      'San Pedro',
+      'Talagante'
+    ]
+  },
+  enlaces: []
+}
 exports.detalleAllende = {
   id: 985,
   nombre: 'Allende Bussi, Isabel',
@@ -149,540 +211,86 @@ exports.circunscripcion3 = [{
   partido: 'R.N.'
 }]
 exports.asistenciaLagos = {
-  senador: {
-    id: 987,
-    nombre: 'Lagos Weber, Ricardo',
-    rut: '7938007-5',
-    region: 'Región de Valparaíso',
-    circunscripcion: 6,
-    telefono: '(56-32) 2504675',
-    mail: 'rlagos@senado.cl',
-    partido: 'P.P.D.'
-  },
   sala: {
     periodo: {
-      legislatura: 487,
-      desde: '2016-04-11T00:00:00.000Z',
-      hasta: '2017-04-10T00:00:00.000Z'
+      legislatura: 488,
+      desde: new Date('2017-04-11T00:00:00.000Z'),
+      hasta: new Date('2018-04-10T00:00:00.000Z')
     },
-    asistencia: 69,
+    asistencia: 6,
     inasistencias: {
-      total: 6,
+      total: 0,
       justificadas: 0,
-      injustificadas: 6
+      injustificadas: 0
     },
     detalle: [
       {
-        sesion: '76',
-        tipo: 'Ordinaria',
-        fecha: '2016-12-21T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '75',
-        tipo: 'Ordinaria',
-        fecha: '2016-12-20T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '74',
-        tipo: 'Ordinaria',
-        fecha: '2016-12-14T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '73',
-        tipo: 'Ordinaria',
-        fecha: '2016-12-13T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '72',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-30T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '71',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-29T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '70',
-        tipo: 'Especial',
-        fecha: '2016-11-24T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '69',
-        tipo: 'Especial',
-        fecha: '2016-11-23T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '68',
-        tipo: 'Especial',
-        fecha: '2016-11-23T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '67',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-22T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '65',
-        tipo: 'Extraordinaria',
-        fecha: '2016-11-16T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '63',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-16T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '62',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-15T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '61',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-09T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '60',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-08T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '59',
-        tipo: 'Ordinaria',
-        fecha: '2016-11-02T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '58',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-26T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '57',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-25T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '56',
-        tipo: 'Especial',
-        fecha: '2016-10-17T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '55',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-12T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '54',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-11T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '53',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-05T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '52',
-        tipo: 'Ordinaria',
-        fecha: '2016-10-04T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '51',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-28T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '50',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-27T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '49',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-14T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '48',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-13T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '47',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-07T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '46',
-        tipo: 'Especial',
-        fecha: '2016-09-07T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '45',
-        tipo: 'Ordinaria',
-        fecha: '2016-09-06T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '44',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-31T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '43',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-30T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '42',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-17T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '41',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-16T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '40',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-10T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '39',
-        tipo: 'Especial',
-        fecha: '2016-08-10T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '38',
-        tipo: 'Especial',
-        fecha: '2016-08-10T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '37',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-09T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '36',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-03T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '35',
-        tipo: 'Especial',
-        fecha: '2016-08-03T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '34',
-        tipo: 'Ordinaria',
-        fecha: '2016-08-02T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '33',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-20T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '32',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-19T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '31',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-13T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '30',
-        tipo: 'Especial',
-        fecha: '2016-07-13T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '29',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-12T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '28',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-06T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '27',
-        tipo: 'Ordinaria',
-        fecha: '2016-07-05T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '26',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-22T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '25',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-21T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '24',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-15T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '23',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-14T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '22',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-08T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '21',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-07T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '20',
-        tipo: 'Ordinaria',
-        fecha: '2016-06-01T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '19',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-31T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '0',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-21T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '18',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-18T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '17',
-        tipo: 'Especial',
-        fecha: '2016-05-18T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '16',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-17T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '15',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-11T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '14',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-10T00:00:00.000Z',
-        asiste: false
-      },
-      {
-        sesion: '13',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-04T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '12',
-        tipo: 'Ordinaria',
-        fecha: '2016-05-03T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '11',
-        tipo: 'Ordinaria',
-        fecha: '2016-04-19T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '10',
-        tipo: 'Ordinaria',
-        fecha: '2016-04-13T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '9',
-        tipo: 'Ordinaria',
-        fecha: '2016-04-12T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '8',
-        tipo: 'Ordinaria',
-        fecha: '2016-04-06T00:00:00.000Z',
-        asiste: true
-      },
-      {
-        sesion: '7',
-        tipo: 'Ordinaria',
-        fecha: '2016-04-05T00:00:00.000Z',
-        asiste: true
-      },
-      {
         sesion: '6',
-        tipo: 'Especial',
-        fecha: '2016-04-05T00:00:00.000Z',
+        tipo: 'Ordinaria',
+        fecha: new Date('2017-04-05T00:00:00.000Z'),
         asiste: true
       },
       {
         sesion: '5',
         tipo: 'Ordinaria',
-        fecha: '2016-03-23T00:00:00.000Z',
+        fecha: new Date('2017-04-04T00:00:00.000Z'),
         asiste: true
       },
       {
         sesion: '4',
-        tipo: 'Especial',
-        fecha: '2016-03-23T00:00:00.000Z',
+        tipo: 'Ordinaria',
+        fecha: new Date('2017-03-22T00:00:00.000Z'),
         asiste: true
       },
       {
         sesion: '3',
         tipo: 'Ordinaria',
-        fecha: '2016-03-22T00:00:00.000Z',
+        fecha: new Date('2017-03-21T00:00:00.000Z'),
         asiste: true
       },
       {
         sesion: '2',
         tipo: 'Ordinaria',
-        fecha: '2016-03-16T00:00:00.000Z',
+        fecha: new Date('2017-03-15T00:00:00.000Z'),
         asiste: true
       },
       {
         sesion: '1',
         tipo: 'Ordinaria',
-        fecha: '2016-03-15T00:00:00.000Z',
+        fecha: new Date('2017-03-14T00:00:00.000Z'),
         asiste: true
       }
     ]
   },
   comisiones: {
-    periodo: 2016,
+    periodo: 2017,
     oficiales: [
       {
-        nombre: 'Comisión Especial de Zonas Extremas',
-        total: 18,
-        asiste: 2
-      },
-      {
         nombre: 'de Hacienda',
-        total: 24,
-        asiste: 23
+        total: 4,
+        asiste: 4
       },
       {
         nombre: 'de Régimen Interior',
-        total: 14,
-        asiste: 12
+        total: 4,
+        asiste: 4
       },
       {
         nombre: 'de Relaciones Exteriores',
-        total: 29,
-        asiste: 10
+        total: 9,
+        asiste: 4
+      },
+      {
+        nombre: 'Especial Mixta de Presupuestos',
+        total: 1,
+        asiste: 1
       }
     ],
     otras: [
       {
-        nombre: 'Cuarta Subcomisión Especial Mixta de Presupuestos',
+        nombre: 'de Vivienda y Urbanismo',
         reemplazante: 0,
         asistente: 1
-      },
-      {
-        nombre: 'de Gobierno, Descentralización y Regionalización',
-        reemplazante: 0,
-        asistente: 2
-      },
-      {
-        nombre: 'de Hacienda',
-        reemplazante: 0,
-        asistente: 3
-      },
-      {
-        nombre: 'de Medio Ambiente y Bienes Nacionales',
-        reemplazante: 0,
-        asistente: 1
-      },
-      {
-        nombre: 'de Salud',
-        reemplazante: 0,
-        asistente: 1
-      },
-      {
-        nombre: 'Especial encargada de conocer proyectos relativos a probidad y transparencia',
-        reemplazante: 1,
-        asistente: 0
-      },
-      {
-        nombre: 'Especial Mixta de Presupuestos',
-        reemplazante: 1,
-        asistente: 0
       }
     ]
   }

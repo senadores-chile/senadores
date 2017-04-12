@@ -1,5 +1,7 @@
 const test = require('blue-tape')
 const detalleAllende = require('./fixtures').detalleAllende
+const detalleAllamand = require('./fixtures').detalleAllamand
+const asistenciaLagos = require('./fixtures').asistenciaLagos
 
 const senadores = require('./')
 
@@ -33,4 +35,16 @@ test('default number search, type defined', t => {
 })
 test('default number search, not found', t => {
   return t.shouldFail(senadores(112233), Error)
+})
+
+// array
+test('default array search', t => {
+  return senadores(['Allamand', 4465782]).then(senadores => {
+    t.deepEqual(senadores, [detalleAllamand, detalleAllende])
+  })
+})
+test('asistencia', t => {
+  return senadores('Lagos', 'asistencia').then(senador => {
+    t.deepEqual(senador[0], asistenciaLagos)
+  })
 })
