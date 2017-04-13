@@ -2,6 +2,8 @@ const test = require('blue-tape')
 const detalleAllende = require('./fixtures').detalleAllende
 const detalleAllamand = require('./fixtures').detalleAllamand
 const asistenciaLagos = require('./fixtures').asistenciaLagos
+const viajesMoreira = require('./fixtures').viajesMoreira
+const eleccionesAllamand = require('./fixtures').eleccionesAllamand
 
 const senadores = require('./')
 
@@ -46,5 +48,37 @@ test('default array search', t => {
 test('asistencia', t => {
   return senadores('Lagos', 'asistencia').then(senador => {
     t.deepEqual(senador[0], asistenciaLagos)
+  })
+})
+test('asistencia sala', t => {
+  return senadores('Lagos', 'asistencia.sala').then(senador => {
+    t.deepEqual(senador[0], asistenciaLagos.sala)
+  })
+})
+test('asistencia comisiones', t => {
+  return senadores('Lagos', 'asistencia.comisiones').then(senador => {
+    t.deepEqual(senador[0], asistenciaLagos.comisiones)
+  })
+})
+// viajes
+test('viajes', t => {
+  return senadores('Moreira', 'viajes.internacionales').then(viajes => {
+    t.deepEqual(viajes[0], viajesMoreira.internacionales)
+  })
+})
+// elecciones
+test('elecciones', t => {
+  return senadores('Allamand', 'elecciones').then(elecciones => {
+    t.deepEqual(elecciones[0], eleccionesAllamand.elecciones)
+  })
+})
+test('elecciones.ingresos', t => {
+  return senadores('Allamand', 'elecciones.ingresos').then(elecciones => {
+    t.deepEqual(elecciones[0], eleccionesAllamand.elecciones.ingresos)
+  })
+})
+test('elecciones.gastos', t => {
+  return senadores('Allamand', 'elecciones.gastos').then(elecciones => {
+    t.deepEqual(elecciones[0], eleccionesAllamand.elecciones.gastos)
   })
 })

@@ -296,18 +296,8 @@ exports.asistenciaLagos = {
   }
 }
 exports.eleccionesAllamand = {
-  'senador': {
-    'id': 905,
-    'nombre': 'Allamand Zavala, Andrés',
-    'rut': '5002921-2',
-    'region': 'Región Metropolitana ',
-    'circunscripcion': 7,
-    'telefono': '(56-32) 2504701',
-    'mail': 'allamand@senado.cl',
-    'partido': 'R.N.'
-  },
-  'elecciones': {
-    'ingresos': [
+  elecciones: {
+    ingresos: [
       {
         'estado': 'Aprobada',
         'proveedor': {
@@ -405,7 +395,7 @@ exports.eleccionesAllamand = {
         'monto': 23205000
       }
     ],
-    'gastos': [
+    gastos: [
       {
         'estado': 'Aprobada',
         'proveedor': {
@@ -1672,31 +1662,16 @@ exports.eleccionesAllamand = {
       }
     ]
   },
-  'representacion': {}
+  representacion: {}
 }
-exports.viajesZaldivar = {
-  id: 60,
-  nombre: 'Zaldívar Larraín, Andrés',
-  rut: '3244592-6',
-  region: 'Región del Maule',
-  circunscripcion: 10,
-  telefono: '(56-32) 2504691',
-  mail: 'azaldivar@senado.cl',
-  partido: 'P.D.C.',
+exports.viajesMoreira = {
   internacionales: [
     {
-      rubro: 'FORO MUNDIAL OCDE',
-      fecha: '2016-05-30T00:00:00.000Z',
-      pais: 'FRANCIA',
-      viatico: 3,
-      motivo: 'HS A ZALDIVAR / Viaje Oficial a Foro Mundial OCDE 2016, a efectuarse en París, Francia, entre los días 31 de mayo y 1° de junio de 2016.'
-    },
-    {
-      rubro: 'REUNION INTERPARLAMENTARIA OCDE',
-      fecha: '2016-02-03T00:00:00.000Z',
-      pais: 'FRANCIA',
-      viatico: 3,
-      motivo: 'HS A. ZALDIVAR / Viaje a París Francia a participar en reunión anual de la Red Parlamentaria del Grupo OCDE / entre días 04 y 05 de febrero / 3 días'
+      rubro: 'VISITA OFICIAL',
+      fecha: new Date('Sun Jan 15 2017 00:00:00'),
+      pais: 'NUEVA ZELANDIA',
+      viatico: 5,
+      motivo: 'H.S. I MOREIRA / Asiste a la 25a Reunión del Foro Asia- Pacífico (APPF), a realizarse en  Islas Fiji, entre el 15/enero/2017 y el 19/enero/2017'
     }
   ]
 }
