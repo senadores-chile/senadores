@@ -29,9 +29,13 @@ module.exports = function senadores (opts, type) {
             : asistencia(opts, { tipo: 'comision' })
   } else if (type === 'viajes') {
     // por ahora se muestran solo viajes al extranjero
-    return viajes(opts, { tipo: 'extranjeros' })
+    return opts.periodoViajesInternacionales
+            ? viajes(opts, { tipo: 'extranjeros', periodo: opts.periodoViajesInternacionales })
+            : viajes(opts, { tipo: 'extranjeros' })
   } else if (type === 'viajes.internacionales') {
-    return viajes(opts, { tipo: 'extranjeros' })
+    return opts.periodoViajesInternacionales
+            ? viajes(opts, { tipo: 'extranjeros', periodo: opts.periodoViajesInternacionales })
+            : viajes(opts, { tipo: 'extranjeros' })
   } else if (type === 'elecciones') {
     return eleccionesP(opts, { tipo: 'elecciones' })
   } else if (type === 'elecciones.gastos') {
