@@ -1,0 +1,101 @@
+{
+  "name": "YerkoPalma/senadores",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://www.npmjs.com/package/senadores",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/YerkoPalma/senadores",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/senadores",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "senadores",
+      "subhead": ":shit: Datos publicos disponibles en la pagina www.senado.cl",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "senadores: :shit: Datos publicos disponibles en la pagina www.senado.cl",
+          "url": "https://www.npmjs.com/package/senadores"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "YerkoPalma",
+          "repo": "senadores"
+        }
+      ],
+      "text": "v0.3.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<blockquote>\n<p>WIP - Datos p&#xFA;blicos disponibles en la p&#xE1;gina www.senado.cl</p>\n</blockquote>\n<h2>Instalaci&#xF3;n</h2>\n<pre>npm install --save senadores</pre><h2>Uso</h2>\n<pre><span class=\"hljs-keyword\">var</span> senadores = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;senadores&apos;</span>)\n\nsenadores() <span class=\"hljs-comment\">// lista completa de senadores</span>\nsenadores(<span class=\"hljs-string\">&apos;Guirardi&apos;</span>) <span class=\"hljs-comment\">// busca por nombre</span>\nsenadores(<span class=\"hljs-number\">1232156</span>) <span class=\"hljs-comment\">// busca por rut</span>\nsenadores({\n  <span class=\"hljs-attr\">partido</span>: <span class=\"hljs-string\">&apos;udi&apos;</span>,\n  <span class=\"hljs-attr\">region</span>: <span class=\"hljs-string\">&apos;metropolitana&apos;</span>,\n  <span class=\"hljs-attr\">asistencia</span>: <span class=\"hljs-string\">&apos;&lt;.85&apos;</span>\n}, <span class=\"hljs-string\">&apos;asistencia.sala&apos;</span>) <span class=\"hljs-comment\">// busca todos los senadores del partido udi, distrito regi&#xF3;n metropolitana con asistencia menor a 85%</span></pre><h2>API</h2>\n<h3><code>senadores([options][, type])</code></h3>\n<p>Existe una unica funci&#xF3;n expuesta, que recibe argumentos variables y opcionales como entrada. Si la operaci&#xF3;n es exitosa, la funci&#xF3;n resuelve en una promesa con un arreglo conteniendo la informaci&#xF3;n solicitada, en caso de existir un error, la funci&#xF3;n arroja un <code>Error</code> con un mensaje especificando la falla.</p>\n<h4><code>options&lt;string | number | array | object&gt;</code></h4>\n<p>El primer argumento de la funci&#xF3;n puede ser de tipo <code>string</code>, <code>number</code>, <code>array</code> u <code>object</code>. Si se trata de un <code>string</code> o <code>number</code> buscara <strong>solo un</strong> senador por nombre o rut/id respectivamente.\nSi se trata de un <code>array</code>, se espera un arreglo de strings y/o numbers, donde se obtendra para cada uno, la informaci&#xF3;n de un senador. En caso de tratarse de un objeto, se espera una serie de opciones para afinar la busqueda.\nEl resultado obtenido al final, depender&#xE1; de la variable <code>type</code> ingresada, por defecto, busca informaci&#xF3;n b&#xE1;sica de cada senador (m&#xE1;s informaci&#xF3;n en <a href=\"#type\">type</a>). Para el objeto, las propiedades de busqueda posibles son:</p>\n<ul>\n<li><code>partido&lt;string&gt;</code>: Siglas del partido politico.</li>\n<li><code>region&lt;string&gt;</code>: Nombre de la regi&#xF3;n (no sirve el n&#xFA;mero de regi&#xF3;n).</li>\n<li><code>nombre&lt;string&gt;</code>: Nombre del/la senador/a.</li>\n<li><code>rut&lt;number&gt;</code>: Rut a encontrar.</li>\n<li><code>circunscripcion&lt;number&gt;</code>: N&#xFA;mero de la circunscripci&#xF3;n.</li>\n<li><code>telefono&lt;string&gt;</code>: T&#xE9;lefono (de oficina) del senador.</li>\n<li><code>email&lt;string&gt;</code>: Email administrativo del senador.</li>\n<li><code>cantidadSenadores&lt;number&gt;</code>: Indica la cantidad m&#xE1;xima de senadores a consultar.</li>\n<li><code>asistenciaSala&lt;string&gt;</code>: String de busqueda de asistencia de sala. Si se trata de un n&#xFA;mero, busca asistencia exacta en porcentaje, tambi&#xE9;n se puede ingresar un comparador l&#xF3;gico para buscar, ej: <code>&apos;&gt;90%&apos;</code>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>&apos;asistencia.sala&apos;</code></em>.</li>\n<li><code>periodoAsistenciaSala&lt;number | date&gt;</code>: Periodo para buscar asistencia, para m&#xE1;s informaci&#xF3;n, consultar la API de <a href=\"https://github.com/YerkoPalma/senadores-asistencia#asistenciaquery--options\">asistencia senadores</a>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>&apos;asistencia.sala&apos;</code></em>.</li>\n<li><code>periodoAsistenciaComisiones&lt;number | date&gt;</code>: Periodo para buscar asistencia, para m&#xE1;s informaci&#xF3;n, consultar la API de <a href=\"https://github.com/YerkoPalma/senadores-asistencia#asistenciaquery--options\">asistencia senadores</a>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>&apos;asistencia.comisiones&apos;</code></em>. </li>\n<li><code>ingresosElecciones&lt;string&gt;</code>: String de busqueda de informaci&#xF3;n de elecciones. Si se trata de un n&#xFA;mero, busca el ingreso m&#xE1;s pr&#xF3;ximo, tambi&#xE9;n se puede ingresar un comparador l&#xF3;gico para buscar, ej: <code>&apos;&gt;90000000&apos;</code>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>elecciones</code> o <code>&apos;elecciones.ingresos&apos;</code></em>.</li>\n<li><code>gastosElecciones&lt;string&gt;</code>: String de busqueda de informaci&#xF3;n de elecciones. Si se trata de un n&#xFA;mero, busca el gasto m&#xE1;s pr&#xF3;ximo, tambi&#xE9;n se puede ingresar un comparador l&#xF3;gico para buscar, ej: <code>&apos;&gt;90000000&apos;</code>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>elecciones</code> o <code>&apos;elecciones.gastos&apos;</code></em>.</li>\n<li><code>periodoViajesNacionales&lt;number | date&gt;</code>: Periodo para buscar viajes nacionales, para m&#xE1;s informaci&#xF3;n, consultar la API de <a href=\"https://github.com/YerkoPalma/senadores-viajes\">viajes senadores</a>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>&apos;viajes&apos;</code> o <code>&apos;viajes.nacionales&apos;</code></em>.</li>\n<li><code>periodoViajesInternacionales&lt;number | date&gt;</code>: Periodo para buscar viajes internacionales, para m&#xE1;s informaci&#xF3;n, consultar la API de <a href=\"https://github.com/YerkoPalma/senadores-viajes\">viajes senadores</a>. <em>Solo ser&#xE1; considerado si el tipo de busqueda es <code>&apos;viajes&apos;</code> o <code>&apos;viajes.internacionales&apos;</code></em>.</li>\n</ul>\n<h4><code>type&lt;string&gt;</code></h4>\n<p>Indicador del tipo de consulta que se esta realizando. Puede tener los siguientes valores:</p>\n<ul>\n<li><code>&apos;default&apos;</code>: Obtiene detalle de los senadores.</li>\n<li><code>&apos;asistencia&apos;</code>: Obtiene asistencia de sala y comisiones de los senadores.</li>\n<li><code>&apos;asistencia.sala&apos;</code>: Obtiene asistencia de sala de los senadores.</li>\n<li><code>&apos;asistencia.comisiones&apos;</code>: Obtiene asistencia de comisiones de los senadores.</li>\n<li><code>&apos;viajes&apos;</code>: Obtiene informaci&#xF3;n de viajes nacionales e internacionales de senadores.</li>\n<li><code>&apos;viajes.nacionales&apos;</code>: Obtiene informaci&#xF3;n de viajes nacionales de senadores.</li>\n<li><code>&apos;viajes.internacionales&apos;</code>: Obtiene informaci&#xF3;n de viajes internacionales de senadores.</li>\n<li><code>&apos;elecciones&apos;</code>: Obtiene informaci&#xF3;n de ingresos y gastos durante periodo de elecciones de cada senador.</li>\n<li><code>&apos;elecciones.ingresos&apos;</code>: Obtiene informaci&#xF3;n de ingresos durante periodo de elecciones de cada senador.</li>\n<li><code>&apos;elecciones.gastos&apos;</code>: Obtiene informaci&#xF3;n de gastos durante periodo de elecciones de cada senador.</li>\n<li><code>&apos;todos&apos;</code>: Obtiene la informaci&#xF3;n equivalente de todo el resto de los modos. <em>CUIDADO: Proceso lento</em>.</li>\n</ul>\n<h2>Otros enlaces</h2>\n<ul>\n<li><a href=\"https://github.com/YerkoPalma/senadores-base\">senadores-base</a> - Informaci&#xF3;n basica y estatica de los senadores actuales de Chile.</li>\n<li><a href=\"https://github.com/YerkoPalma/senadores-asistencia\">senadores-asistencia</a> - Observador de la asistencia de senadores tanto a sesiones de sala como a comisiones del senado de Chile.</li>\n<li><a href=\"https://github.com/YerkoPalma/senadores-detalle\">senadores-detalle</a> - Detalle complementario a la informaci&#xF3;n base de cada senador.</li>\n<li><a href=\"https://github.com/YerkoPalma/senadores-viajes\">senadores-viajes</a> - Obtiene el detalle de los viajes realizados por senadores de Chile.</li>\n<li><a href=\"https://github.com/YerkoPalma/senadores-elecciones\">senadores-elecciones</a> - Contiene la informaci&#xF3;n de las ultimas elecciones de senadores, obtenidas desde el Servel.</li>\n</ul>\n<h2>Licencia</h2>\n<p><a href=\"/license\">MIT</a> &#xA9; <a href=\"https://github.com/YerkoPalma\">Yerko Palma</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/YerkoPalma/senadores",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/YerkoPalma",
+          "text": "YerkoPalma"
+        }
+      ]
+    }
+  ]
+}
