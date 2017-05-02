@@ -25,7 +25,6 @@ senadores({
 
 ## API
 
-
 ### `senadores([options][, type])`
 
 Existe una unica función expuesta, que recibe argumentos variables y opcionales como entrada. Si la operación es exitosa, la función resuelve en una promesa con un arreglo conteniendo la información solicitada, en caso de existir un error, la función arroja un `Error` con un mensaje especificando la falla.

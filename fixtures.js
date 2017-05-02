@@ -99,117 +99,602 @@ exports.detalleAllende = {
     'http://www.isabelallendebussi.cl/'
   ]
 }
-exports.socialistas = [{
-  id: 985,
-  nombre: 'Allende Bussi, Isabel',
-  rut: '4465782-1',
-  region: 'Región de Atacama',
-  circunscripcion: 3,
-  telefono: '(56-32) 2504671',
-  mail: 'iallende@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 1115,
-  nombre: 'De Urresti Longton, Alfonso',
-  rut: '9062945-K',
-  region: 'Región de los Ríos',
-  circunscripcion: 16,
-  telefono: 'l',
-  mail: 'adeurresti@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 912,
-  nombre: 'Letelier Morel, Juan Pablo',
-  rut: '7049575-9',
-  region: 'Región del Libertador General Bernardo O\'Higgins',
-  circunscripcion: 9,
-  telefono: '(56-32) 2504576',
-  mail: 'jpletelier@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 1119,
-  nombre: 'Montes Cisternas, Carlos',
-  rut: '4778821-8',
-  region: 'Región Metropolitana ',
-  circunscripcion: 8,
-  telefono: '(56-32)  4714 |',
-  mail: 'cmontes@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 1116,
-  nombre: 'Quinteros Lara, Rabindranath',
-  rut: '4423698-2',
-  region: 'Región de Los Lagos',
-  circunscripcion: 17,
-  telefono: '(56-32) 2504721',
-  mail: 'rquinteros@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 1010,
-  nombre: 'Rossi Ciocca, Fulvio',
-  rut: '9510876-8',
-  region: 'Región de Tarapacá\n\n',
-  circunscripcion: 1,
-  telefono: '(56-32) 2504683',
-  mail: 'frossi@senado.cl',
-  partido: 'P.S.'
-}]
-exports.metropolitanos = [{
-  id: 905,
-  nombre: 'Allamand Zavala, Andrés',
-  rut: '5002921-2',
-  region: 'Región Metropolitana ',
-  circunscripcion: 7,
-  telefono: '(56-32) 2504701',
-  mail: 'allamand@senado.cl',
-  partido: 'R.N.'
-}, {
-  id: 909,
-  nombre: 'Girardi Lavín, Guido',
-  rut: '8462985-5',
-  region: 'Región Metropolitana ',
-  circunscripcion: 7,
-  telefono: '(56-32) 2504570',
-  mail: 'ggirardi@senado.cl',
-  partido: 'P.P.D.'
-}, {
-  id: 1119,
-  nombre: 'Montes Cisternas, Carlos',
-  rut: '4778821-8',
-  region: 'Región Metropolitana ',
-  circunscripcion: 8,
-  telefono: '(56-32)  4714 |',
-  mail: 'cmontes@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 1120,
-  nombre: 'Ossandón Irarrázabal, Manuel José',
-  rut: '7022006-7',
-  region: 'Región Metropolitana ',
-  circunscripcion: 8,
-  telefono: '(56-32) 2504719',
-  mail: 'mjossandon@senado.cl',
-  partido: 'R.N.'
-}]
-exports.circunscripcion3 = [{
-  id: 985,
-  nombre: 'Allende Bussi, Isabel',
-  rut: '4465782-1',
-  region: 'Región de Atacama',
-  circunscripcion: 3,
-  telefono: '(56-32) 2504671',
-  mail: 'iallende@senado.cl',
-  partido: 'P.S.'
-}, {
-  id: 693,
-  nombre: 'Prokurica Prokurica, Baldo',
-  rut: '5261867-3',
-  region: 'Región de Atacama',
-  circunscripcion: 3,
-  telefono: '(56-32) 2504518',
-  mail: 'bprokurica@senado.cl',
-  partido: 'R.N.'
-}]
+exports.socialistas = [
+  {
+    id: 985,
+    nombre: 'Allende Bussi, Isabel',
+    rut: '4465782-1',
+    region: 'Región de Atacama',
+    circunscripcion: 3,
+    telefono: '(56-32) 2504671',
+    mail: 'iallende@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 75176,
+        medida: 'Km2'
+      },
+      habitantes: 254336,
+      circunscripcion: '3 (Atacama)',
+      distritos: [
+        5,
+        6
+      ],
+      comunas: [
+        'Chañaral',
+        'Copiapó',
+        'Diego de Almagro',
+        'Alto del Carmen',
+        'Caldera',
+        'Huasco',
+        'Freirina',
+        'Tierra Amarilla',
+        'Vallenar'
+      ]
+    },
+    enlaces: [
+      'http://twitter.com/iallendebussi',
+      'http://www.facebook.com/senadoraisabelallende',
+      'http://www.flickr.com/photos/isabelallendebussi',
+      'http://www.isabelallendebussi.cl/'
+    ]
+  },
+  {
+    id: 1115,
+    nombre: 'De Urresti Longton, Alfonso',
+    rut: '9062945-K',
+    region: 'Región de los Ríos',
+    circunscripcion: 16,
+    telefono: 'l',
+    mail: 'adeurresti@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 18429,
+        medida: 'Km2'
+      },
+      habitantes: 356396,
+      circunscripcion: '16 (Los Ríos)',
+      distritos: [
+        53,
+        54
+      ],
+      comunas: [
+        'Corral',
+        'Lanco',
+        'Máfil',
+        'Mariquina',
+        'Valdivia',
+        'Futrono',
+        'La Unión',
+        'Lago Ranco',
+        'Los Lagos',
+        'Paillaco',
+        'Panguipulli',
+        'Río Bueno'
+      ]
+    },
+    enlaces: []
+  },
+  {
+    id: 912,
+    nombre: 'Letelier Morel, Juan Pablo',
+    rut: '7049575-9',
+    region: 'Región del Libertador General Bernardo O\'Higgins',
+    circunscripcion: 9,
+    telefono: '(56-32) 2504576',
+    mail: 'jpletelier@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 16387,
+        medida: 'Km2'
+      },
+      habitantes: 780627,
+      circunscripcion: '9 (O´Higgins)',
+      distritos: [
+        32,
+        33,
+        34,
+        35
+      ],
+      comunas: [
+        'Rancagua',
+        'Codegua',
+        'Coínco',
+        'Coltauco',
+        'Doñihue',
+        'Graneros',
+        'Machalí',
+        'Malloa',
+        'Mostazal',
+        'Olivar',
+        'Quinta de Tilcoco',
+        'Rengo',
+        'Requínoa',
+        'Chimbarongo',
+        'Las Cabras',
+        'Peumo',
+        'Pichidegua',
+        'San Fernando',
+        'San Vicente',
+        'Chépica',
+        'La Estrella',
+        'Litueche',
+        'Lolol',
+        'Marchihue',
+        'Nancagua',
+        'Navidad',
+        'Palmilla',
+        'Paredones',
+        'Peralillo',
+        'Pichilemu',
+        'Placilla',
+        'Pumanque',
+        'Santa Cruz'
+      ]
+    },
+    enlaces: [
+      'http://www.jpletelier.cl/'
+    ]
+  },
+  {
+    id: 1119,
+    nombre: 'Montes Cisternas, Carlos',
+    rut: '4778821-8',
+    region: 'Región Metropolitana ',
+    circunscripcion: 8,
+    telefono: '(56-32)  4714 |',
+    mail: 'cmontes@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 6979,
+        medida: 'Km2'
+      },
+      habitantes: 3086493,
+      circunscripcion: '8 (Santiago Oriente)',
+      distritos: [
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      comunas: [
+        'Ñuñoa',
+        'Providencia',
+        'Las Condes',
+        'Lo Barnechea',
+        'Vitacura',
+        'La Reina',
+        'Peñalolén',
+        'La Granja',
+        'Macul',
+        'San Joaquín',
+        'La Florida',
+        'El Bosque',
+        'La Cisterna',
+        'San Ramón',
+        'Lo Espejo',
+        'Pedro Aguirre Cerda',
+        'San Miguel',
+        'La Pintana',
+        'Pirque',
+        'Puente Alto',
+        'San José de Maipo'
+      ]
+    },
+    enlaces: []
+  },
+  {
+    id: 1116,
+    nombre: 'Quinteros Lara, Rabindranath',
+    rut: '4423698-2',
+    region: 'Región de Los Lagos',
+    circunscripcion: 17,
+    telefono: '(56-32) 2504721',
+    mail: 'rquinteros@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 48583,
+        medida: 'Km2'
+      },
+      habitantes: 716739,
+      circunscripcion: '17 (Los Lagos)',
+      distritos: [
+        55,
+        56,
+        57,
+        58
+      ],
+      comunas: [
+        'Osorno',
+        'San Juan de la Costa',
+        'San Pablo',
+        'Fresia',
+        'Frutillar',
+        'Llanquihue',
+        'Los Muermos',
+        'Puerto Octay',
+        'Puerto Varas',
+        'Puyehue',
+        'Purranque',
+        'Río Negro',
+        'Calbuco',
+        'Cochamó',
+        'Maullín',
+        'Puerto Montt',
+        'Ancud',
+        'Castro',
+        'Chaitén',
+        'Chonchi',
+        'Curaco de Vélez',
+        'Dalcahue',
+        'Futaleufú',
+        'Hualaihué',
+        'Palena',
+        'Puqueldón',
+        'Queilén',
+        'Quellón',
+        'Quemchi',
+        'Quinchao'
+      ]
+    },
+    enlaces: []
+  },
+  {
+    id: 1010,
+    nombre: 'Rossi Ciocca, Fulvio',
+    rut: '9510876-8',
+    region: 'Región de Tarapacá\n\n',
+    circunscripcion: 1,
+    telefono: '(56-32) 2504683',
+    mail: 'frossi@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 59099,
+        medida: 'Km2'
+      },
+      habitantes: 428594,
+      circunscripcion: '1 (Tarapacá)',
+      distritos: [
+        1,
+        2
+      ],
+      comunas: [
+        'Arica',
+        'Camarones',
+        'General Lagos',
+        'Putre',
+        'Alto Hospicio',
+        'Camiña',
+        'Colchane',
+        'Huara',
+        'Iquique',
+        'Pica',
+        'Pozo Almonte'
+      ]
+    },
+    enlaces: []
+  }
+]
+exports.metropolitanos = [
+  {
+    id: 905,
+    nombre: 'Allamand Zavala, Andrés',
+    rut: '5002921-2',
+    region: 'Región Metropolitana ',
+    circunscripcion: 7,
+    telefono: '(56-32) 2504701',
+    mail: 'allamand@senado.cl',
+    partido: 'R.N.',
+    representacion: {
+      superficie: {
+        cantidad: 8423,
+        medida: 'Km2'
+      },
+      habitantes: 2974692,
+      circunscripcion: '7 (Santiago Poniente)',
+      distritos: [
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        30,
+        31
+      ],
+      comunas: [
+        'Colina',
+        'Lampa',
+        'Quilicura',
+        'Pudahuel',
+        'Tiltil',
+        'Conchalí',
+        'Huechuraba',
+        'Renca',
+        'Quinta Normal',
+        'Lo Prado',
+        'Cerro Navia',
+        'Independencia',
+        'Recoleta',
+        'Cerrillos',
+        'Estación Central',
+        'Maipú',
+        'Santiago',
+        'Buin',
+        'Calera de Tango',
+        'Paine',
+        'San Bernardo',
+        'Alhué',
+        'Curacaví',
+        'El Monte',
+        'Isla de Maipo',
+        'María Pinto',
+        'Melipilla',
+        'Padre Hurtado',
+        'Peñaflor',
+        'San Pedro',
+        'Talagante'
+      ]
+    },
+    enlaces: []
+  },
+  {
+    id: 909,
+    nombre: 'Girardi Lavín, Guido',
+    rut: '8462985-5',
+    region: 'Región Metropolitana ',
+    circunscripcion: 7,
+    telefono: '(56-32) 2504570',
+    mail: 'ggirardi@senado.cl',
+    partido: 'P.P.D.',
+    representacion: {
+      superficie: {
+        cantidad: 8423,
+        medida: 'Km2'
+      },
+      habitantes: 2974692,
+      circunscripcion: '7 (Santiago Poniente)',
+      distritos: [
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        30,
+        31
+      ],
+      comunas: [
+        'Colina',
+        'Lampa',
+        'Quilicura',
+        'Pudahuel',
+        'Tiltil',
+        'Conchalí',
+        'Huechuraba',
+        'Renca',
+        'Quinta Normal',
+        'Lo Prado',
+        'Cerro Navia',
+        'Independencia',
+        'Recoleta',
+        'Cerrillos',
+        'Estación Central',
+        'Maipú',
+        'Santiago',
+        'Buin',
+        'Calera de Tango',
+        'Paine',
+        'San Bernardo',
+        'Alhué',
+        'Curacaví',
+        'El Monte',
+        'Isla de Maipo',
+        'María Pinto',
+        'Melipilla',
+        'Padre Hurtado',
+        'Peñaflor',
+        'San Pedro',
+        'Talagante'
+      ]
+    },
+    enlaces: [
+      'http://twitter.com/guidogirardi',
+      'http://www.facebook.com/senadorgirardi',
+      'http://www.guidogirardi.cl/'
+    ]
+  },
+  {
+    id: 1119,
+    nombre: 'Montes Cisternas, Carlos',
+    rut: '4778821-8',
+    region: 'Región Metropolitana ',
+    circunscripcion: 8,
+    telefono: '(56-32)  4714 |',
+    mail: 'cmontes@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 6979,
+        medida: 'Km2'
+      },
+      habitantes: 3086493,
+      circunscripcion: '8 (Santiago Oriente)',
+      distritos: [
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      comunas: [
+        'Ñuñoa',
+        'Providencia',
+        'Las Condes',
+        'Lo Barnechea',
+        'Vitacura',
+        'La Reina',
+        'Peñalolén',
+        'La Granja',
+        'Macul',
+        'San Joaquín',
+        'La Florida',
+        'El Bosque',
+        'La Cisterna',
+        'San Ramón',
+        'Lo Espejo',
+        'Pedro Aguirre Cerda',
+        'San Miguel',
+        'La Pintana',
+        'Pirque',
+        'Puente Alto',
+        'San José de Maipo'
+      ]
+    },
+    enlaces: []
+  },
+  {
+    id: 1120,
+    nombre: 'Ossandón Irarrázabal, Manuel José',
+    rut: '7022006-7',
+    region: 'Región Metropolitana ',
+    circunscripcion: 8,
+    telefono: '(56-32) 2504719',
+    mail: 'mjossandon@senado.cl',
+    partido: 'R.N.',
+    representacion: {
+      superficie: {
+        cantidad: 6979,
+        medida: 'Km2'
+      },
+      habitantes: 3086493,
+      circunscripcion: '8 (Santiago Oriente)',
+      distritos: [
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      comunas: [
+        'Ñuñoa',
+        'Providencia',
+        'Las Condes',
+        'Lo Barnechea',
+        'Vitacura',
+        'La Reina',
+        'Peñalolén',
+        'La Granja',
+        'Macul',
+        'San Joaquín',
+        'La Florida',
+        'El Bosque',
+        'La Cisterna',
+        'San Ramón',
+        'Lo Espejo',
+        'Pedro Aguirre Cerda',
+        'San Miguel',
+        'La Pintana',
+        'Pirque',
+        'Puente Alto',
+        'San José de Maipo'
+      ]
+    },
+    enlaces: []
+  }
+]
+exports.circunscripcion3 = [
+  {
+    id: 985,
+    nombre: 'Allende Bussi, Isabel',
+    rut: '4465782-1',
+    region: 'Región de Atacama',
+    circunscripcion: 3,
+    telefono: '(56-32) 2504671',
+    mail: 'iallende@senado.cl',
+    partido: 'P.S.',
+    representacion: {
+      superficie: {
+        cantidad: 75176,
+        medida: 'Km2'
+      },
+      habitantes: 254336,
+      circunscripcion: '3 (Atacama)',
+      distritos: [
+        5,
+        6
+      ],
+      comunas: [
+        'Chañaral',
+        'Copiapó',
+        'Diego de Almagro',
+        'Alto del Carmen',
+        'Caldera',
+        'Huasco',
+        'Freirina',
+        'Tierra Amarilla',
+        'Vallenar'
+      ]
+    },
+    enlaces: [
+      'http://twitter.com/iallendebussi',
+      'http://www.facebook.com/senadoraisabelallende',
+      'http://www.flickr.com/photos/isabelallendebussi',
+      'http://www.isabelallendebussi.cl/'
+    ]
+  },
+  {
+    id: 693,
+    nombre: 'Prokurica Prokurica, Baldo',
+    rut: '5261867-3',
+    region: 'Región de Atacama',
+    circunscripcion: 3,
+    telefono: '(56-32) 2504518',
+    mail: 'bprokurica@senado.cl',
+    partido: 'R.N.',
+    representacion: {
+      superficie: {
+        cantidad: 75176,
+        medida: 'Km2'
+      },
+      habitantes: 254336,
+      circunscripcion: '3 (Atacama)',
+      distritos: [
+        5,
+        6
+      ],
+      comunas: [
+        'Chañaral',
+        'Copiapó',
+        'Diego de Almagro',
+        'Alto del Carmen',
+        'Caldera',
+        'Huasco',
+        'Freirina',
+        'Tierra Amarilla',
+        'Vallenar'
+      ]
+    },
+    enlaces: [
+      'http://www.baldoprokurica.cl/'
+    ]
+  }
+]
 exports.asistenciaLagos = {
   sala: {
     periodo: {
