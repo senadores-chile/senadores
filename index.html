@@ -34,7 +34,6 @@ El resultado obtenido al final, dependerá de la variable <code>type</code> ingr
 <li><code>periodoAsistenciaComisiones&lt;number | date&gt;</code>: Periodo para buscar asistencia, para más información, consultar la API de <a href="https://github.com/YerkoPalma/senadores-asistencia#asistenciaquery--options">asistencia senadores</a>. <em>Solo será considerado si el tipo de busqueda es <code>'asistencia.comisiones'</code></em>. </li>
 <li><code>ingresosElecciones&lt;string&gt;</code>: String de busqueda de información de elecciones. Si se trata de un número, busca el ingreso más próximo, también se puede ingresar un comparador lógico para buscar, ej: <code>'&gt;90000000'</code>. <em>Solo será considerado si el tipo de busqueda es <code>elecciones</code> o <code>'elecciones.ingresos'</code></em>.</li>
 <li><code>gastosElecciones&lt;string&gt;</code>: String de busqueda de información de elecciones. Si se trata de un número, busca el gasto más próximo, también se puede ingresar un comparador lógico para buscar, ej: <code>'&gt;90000000'</code>. <em>Solo será considerado si el tipo de busqueda es <code>elecciones</code> o <code>'elecciones.gastos'</code></em>.</li>
-<li><code>periodoViajesNacionales&lt;number | date&gt;</code>: Periodo para buscar viajes nacionales, para más información, consultar la API de <a href="https://github.com/YerkoPalma/senadores-viajes">viajes senadores</a>. <em>Solo será considerado si el tipo de busqueda es <code>'viajes'</code> o <code>'viajes.nacionales'</code></em>.</li>
 <li><code>periodoViajesInternacionales&lt;number | date&gt;</code>: Periodo para buscar viajes internacionales, para más información, consultar la API de <a href="https://github.com/YerkoPalma/senadores-viajes">viajes senadores</a>. <em>Solo será considerado si el tipo de busqueda es <code>'viajes'</code> o <code>'viajes.internacionales'</code></em>.</li>
 </ul>
 <h4><code>type&lt;string&gt;</code></h4>
@@ -45,12 +44,10 @@ El resultado obtenido al final, dependerá de la variable <code>type</code> ingr
 <li><code>'asistencia.sala'</code>: Obtiene asistencia de sala de los senadores.</li>
 <li><code>'asistencia.comisiones'</code>: Obtiene asistencia de comisiones de los senadores.</li>
 <li><code>'viajes'</code>: Obtiene información de viajes nacionales e internacionales de senadores.</li>
-<li><code>'viajes.nacionales'</code>: Obtiene información de viajes nacionales de senadores.</li>
 <li><code>'viajes.internacionales'</code>: Obtiene información de viajes internacionales de senadores.</li>
 <li><code>'elecciones'</code>: Obtiene información de ingresos y gastos durante periodo de elecciones de cada senador.</li>
 <li><code>'elecciones.ingresos'</code>: Obtiene información de ingresos durante periodo de elecciones de cada senador.</li>
 <li><code>'elecciones.gastos'</code>: Obtiene información de gastos durante periodo de elecciones de cada senador.</li>
-<li><code>'todos'</code>: Obtiene la información equivalente de todo el resto de los modos. <em>CUIDADO: Proceso lento</em>.</li>
 </ul>
 <h2>Otros enlaces</h2>
 <ul>
