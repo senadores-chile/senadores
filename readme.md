@@ -48,7 +48,6 @@ El resultado obtenido al final, dependerá de la variable `type` ingresada, por 
 - `periodoAsistenciaComisiones<number | date>`: Periodo para buscar asistencia, para más información, consultar la API de [asistencia senadores](https://github.com/YerkoPalma/senadores-asistencia#asistenciaquery--options). _Solo será considerado si el tipo de busqueda es `'asistencia.comisiones'`_. 
 - `ingresosElecciones<string>`: String de busqueda de información de elecciones. Si se trata de un número, busca el ingreso más próximo, también se puede ingresar un comparador lógico para buscar, ej: `'>90000000'`. _Solo será considerado si el tipo de busqueda es `elecciones` o `'elecciones.ingresos'`_.
 - `gastosElecciones<string>`: String de busqueda de información de elecciones. Si se trata de un número, busca el gasto más próximo, también se puede ingresar un comparador lógico para buscar, ej: `'>90000000'`. _Solo será considerado si el tipo de busqueda es `elecciones` o `'elecciones.gastos'`_.
-- `periodoViajesNacionales<number | date>`: Periodo para buscar viajes nacionales, para más información, consultar la API de [viajes senadores](https://github.com/YerkoPalma/senadores-viajes). _Solo será considerado si el tipo de busqueda es `'viajes'` o `'viajes.nacionales'`_.
 - `periodoViajesInternacionales<number | date>`: Periodo para buscar viajes internacionales, para más información, consultar la API de [viajes senadores](https://github.com/YerkoPalma/senadores-viajes). _Solo será considerado si el tipo de busqueda es `'viajes'` o `'viajes.internacionales'`_.
 
 #### `type<string>`
@@ -60,12 +59,10 @@ Indicador del tipo de consulta que se esta realizando. Puede tener los siguiente
 - `'asistencia.sala'`: Obtiene asistencia de sala de los senadores.
 - `'asistencia.comisiones'`: Obtiene asistencia de comisiones de los senadores.
 - `'viajes'`: Obtiene información de viajes nacionales e internacionales de senadores.
-- `'viajes.nacionales'`: Obtiene información de viajes nacionales de senadores.
 - `'viajes.internacionales'`: Obtiene información de viajes internacionales de senadores.
 - `'elecciones'`: Obtiene información de ingresos y gastos durante periodo de elecciones de cada senador.
 - `'elecciones.ingresos'`: Obtiene información de ingresos durante periodo de elecciones de cada senador.
 - `'elecciones.gastos'`: Obtiene información de gastos durante periodo de elecciones de cada senador.
-- `'todos'`: Obtiene la información equivalente de todo el resto de los modos. _CUIDADO: Proceso lento_.
 
 ## Otros enlaces
 

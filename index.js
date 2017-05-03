@@ -22,6 +22,13 @@ module.exports = function senadores (opts, type) {
   } else if (type === 'asistencia') {
     return asistencia(opts)
   } else if (type === 'asistencia.sala') {
+    if (opts.asistenciaSala && typeof opts.asistenciaSala === 'string') {
+      asistencia(opts, { tipo: 'sala' }).then(asistencias => {
+        var total = asistencias[0].sala.asistencia + asistencias[0].sala.inasistencias.total
+        var filter = parseCondition(opts.asistenciaSala, 'sala.asistencia', total)
+        return Promise.resolve(asistencias.filter(filter))
+      })
+    }
     return asistencia(opts, { tipo: 'sala' })
   } else if (type === 'asistencia.comision' || type === 'asistencia.comisiones') {
     return opts.periodoAsistenciaComisiones
@@ -42,5 +49,89 @@ module.exports = function senadores (opts, type) {
     return eleccionesP(opts, { tipo: 'gastos' })
   } else if (type === 'elecciones.ingresos') {
     return eleccionesP(opts, { tipo: 'ingresos' })
+  }
+}
+
+function parseCondition (condition, property, total) {
+  // get operator
+  var regex = /([<|>|=]{1,2})((?:\.\d+)|(?:\d+\.\d*)|(?:\d*))(%)?/ // /([<|>|=]{1,2})(\.?)(\d*)(%)?/
+  var arr = regex.exec(condition)
+  var operator = arr[1]
+  var value = parseFloat(arr[3])
+  var isPercentage = arr[4] === '%'
+  var isRatio = ((value >= 0) && (value <= 1))
+
+  switch (operator) {
+    case '<':
+      return (item) => {
+        var val = getProperty(item, property)
+        if (val) {
+          return isPercentage
+                  ? val < (value * total) / 100
+                  : isRatio
+                    ? val < value * total
+                    : val < value
+        }
+        return false
+      }
+    case '>':
+      return (item) => {
+        var val = getProperty(item, property)
+        if (val) {
+          return isPercentage
+                  ? val > (value * total) / 100
+                  : isRatio
+                    ? val > value * total
+                    : val > value
+        }
+        return false
+      }
+    case '<=':
+      return (item) => {
+        var val = getProperty(item, property)
+        if (val) {
+          return isPercentage
+                  ? val <= (value * total) / 100
+                  : isRatio
+                    ? val <= value * total
+                    : val <= value
+        }
+        return false
+      }
+    case '>=':
+      return (item) => {
+        var val = getProperty(item, property)
+        if (val) {
+          return isPercentage
+                  ? val >= (value * total) / 100
+                  : isRatio
+                    ? val >= value * total
+                    : val >= value
+        }
+        return false
+      }
+    case '=':
+      return (item) => {
+        var val = getProperty(item, property)
+        if (val) {
+          return isPercentage
+                  ? val === (value * total) / 100
+                  : isRatio
+                    ? val === value * total
+                    : val === value
+        }
+        return false
+      }
+
+    default:
+      return () => false
+  }
+  function getProperty (item, prop) {
+    var props = prop.split('.')
+    var value = item
+    props.forEach(property => {
+      value = value[property]
+    })
+    return value
   }
 }
