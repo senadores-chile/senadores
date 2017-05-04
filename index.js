@@ -56,6 +56,13 @@ module.exports = function senadores (opts, type) {
     }
     return eleccionesP(opts, { tipo: 'gastos', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones.ingresos') {
+    if (opts.ingresosElecciones && typeof opts.ingresosElecciones === 'string') {
+      return eleccionesP(opts, { tipo: 'ingresos', incluyeSenador: !!opts.incluyeSenador }).then(ingresos => {
+        var filter = parseCondition(opts.ingresosElecciones, opts.incluyeSenador ? 'elecciones.ingresos.total' : 'total')
+        var array = ingresos.filter(filter)
+        return Promise.resolve(array)
+      })
+    }
     return eleccionesP(opts, { tipo: 'ingresos', incluyeSenador: !!opts.incluyeSenador })
   }
 }
@@ -139,7 +146,7 @@ function parseCondition (condition, property, total) {
     var props = prop.split('.')
     var value = item
     props.forEach(property => {
-      value = value[property]
+      if (value) value = value[property]
     })
     return value
   }
