@@ -23,10 +23,11 @@ module.exports = function senadores (opts, type) {
     return asistencia(opts, { incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'asistencia.sala') {
     if (opts.asistenciaSala && typeof opts.asistenciaSala === 'string') {
-      asistencia(opts, { tipo: 'sala', incluyeSenador: !!opts.incluyeSenador }).then(asistencias => {
+      return asistencia(opts, { tipo: 'sala', incluyeSenador: !!opts.incluyeSenador }).then(asistencias => {
         var total = asistencias[0].asistencia + asistencias[0].inasistencias.total
         var filter = parseCondition(opts.asistenciaSala, 'asistencia', total)
-        return Promise.resolve(asistencias.filter(filter))
+        var array = asistencias.filter(filter)
+        return Promise.resolve(array)
       })
     }
     return asistencia(opts, { tipo: 'sala', incluyeSenador: !!opts.incluyeSenador })
