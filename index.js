@@ -20,20 +20,20 @@ module.exports = function senadores (opts, type) {
   if (type === 'default') {
     return detalle(opts)
   } else if (type === 'asistencia') {
-    return asistencia(opts)
+    return asistencia(opts, { incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'asistencia.sala') {
     if (opts.asistenciaSala && typeof opts.asistenciaSala === 'string') {
-      asistencia(opts, { tipo: 'sala' }).then(asistencias => {
-        var total = asistencias[0].sala.asistencia + asistencias[0].sala.inasistencias.total
-        var filter = parseCondition(opts.asistenciaSala, 'sala.asistencia', total)
+      asistencia(opts, { tipo: 'sala', incluyeSenador: !!opts.incluyeSenador }).then(asistencias => {
+        var total = asistencias[0].asistencia + asistencias[0].inasistencias.total
+        var filter = parseCondition(opts.asistenciaSala, 'asistencia', total)
         return Promise.resolve(asistencias.filter(filter))
       })
     }
-    return asistencia(opts, { tipo: 'sala' })
+    return asistencia(opts, { tipo: 'sala', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'asistencia.comision' || type === 'asistencia.comisiones') {
     return opts.periodoAsistenciaComisiones
-            ? asistencia(opts, { tipo: 'comision', periodo: opts.periodoAsistenciaComisiones })
-            : asistencia(opts, { tipo: 'comision' })
+            ? asistencia(opts, { tipo: 'comision', periodo: opts.periodoAsistenciaComisiones, incluyeSenador: !!opts.incluyeSenador })
+            : asistencia(opts, { tipo: 'comision', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'viajes') {
     // por ahora se muestran solo viajes al extranjero
     return opts.periodoViajesInternacionales
@@ -41,14 +41,14 @@ module.exports = function senadores (opts, type) {
             : viajes(opts, { tipo: 'extranjeros' })
   } else if (type === 'viajes.internacionales') {
     return opts.periodoViajesInternacionales
-            ? viajes(opts, { tipo: 'extranjeros', periodo: opts.periodoViajesInternacionales })
-            : viajes(opts, { tipo: 'extranjeros' })
+            ? viajes(opts, { tipo: 'extranjeros', periodo: opts.periodoViajesInternacionales, incluyeSenador: !!opts.incluyeSenador })
+            : viajes(opts, { tipo: 'extranjeros', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones') {
-    return eleccionesP(opts, { tipo: 'elecciones' })
+    return eleccionesP(opts, { tipo: 'elecciones', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones.gastos') {
-    return eleccionesP(opts, { tipo: 'gastos' })
+    return eleccionesP(opts, { tipo: 'gastos', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones.ingresos') {
-    return eleccionesP(opts, { tipo: 'ingresos' })
+    return eleccionesP(opts, { tipo: 'ingresos', incluyeSenador: !!opts.incluyeSenador })
   }
 }
 
@@ -57,8 +57,8 @@ function parseCondition (condition, property, total) {
   var regex = /([<|>|=]{1,2})((?:\.\d+)|(?:\d+\.\d*)|(?:\d*))(%)?/ // /([<|>|=]{1,2})(\.?)(\d*)(%)?/
   var arr = regex.exec(condition)
   var operator = arr[1]
-  var value = parseFloat(arr[3])
-  var isPercentage = arr[4] === '%'
+  var value = parseFloat(arr[2])
+  var isPercentage = arr[3] === '%'
   var isRatio = ((value >= 0) && (value <= 1))
 
   switch (operator) {

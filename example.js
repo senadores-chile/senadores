@@ -1,3 +1,8 @@
 const senadores = require('./')
 
-senadores('Allamand', s => console.log(s))
+senadores({
+  partido: 'PS',
+  asistenciaSala: '<.99'
+}, 'asistencia.sala').then(s => {
+  console.log(s)
+})
