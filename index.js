@@ -47,6 +47,13 @@ module.exports = function senadores (opts, type) {
   } else if (type === 'elecciones') {
     return eleccionesP(opts, { tipo: 'elecciones', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones.gastos') {
+    if (opts.gastosElecciones && typeof opts.gastosElecciones === 'string') {
+      return eleccionesP(opts, { tipo: 'gastos', incluyeSenador: !!opts.incluyeSenador }).then(gastos => {
+        var filter = parseCondition(opts.gastosElecciones, opts.incluyeSenador ? 'elecciones.gastos.total' : 'total')
+        var array = gastos.filter(filter)
+        return Promise.resolve(array)
+      })
+    }
     return eleccionesP(opts, { tipo: 'gastos', incluyeSenador: !!opts.incluyeSenador })
   } else if (type === 'elecciones.ingresos') {
     return eleccionesP(opts, { tipo: 'ingresos', incluyeSenador: !!opts.incluyeSenador })
@@ -54,6 +61,7 @@ module.exports = function senadores (opts, type) {
 }
 
 function parseCondition (condition, property, total) {
+  total = total || 1
   // get operator
   var regex = /([<|>|=]{1,2})((?:\.\d+)|(?:\d+\.\d*)|(?:\d*))(%)?/ // /([<|>|=]{1,2})(\.?)(\d*)(%)?/
   var arr = regex.exec(condition)
