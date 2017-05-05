@@ -101,3 +101,18 @@ test('options circunscripcion', t => {
     t.deepEqual(circunscripcion3, detalleCircunscripcion3)
   })
 })
+test('options ingresosElecciones', t => {
+  return senadores({ ingresosElecciones: '>500000000' }, 'elecciones.ingresos').then(ingresos => {
+    t.equal(ingresos.length, 3)
+  })
+})
+test('options gastosElecciones', t => {
+  return senadores({ gastosElecciones: '>500000000' }, 'elecciones.gastos').then(gastos => {
+    t.equal(gastos.length, 3)
+  })
+})
+test('options asistenciaSala', t => {
+  return senadores({ partido: 'PS', asistenciaSala: '<.99' }, 'asistencia.sala').then(asistencias => {
+    t.equal(asistencias.length, 3)
+  })
+})
